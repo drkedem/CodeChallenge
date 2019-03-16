@@ -16,7 +16,7 @@ class Api::V1::ArticlesController < ApplicationController
     if @article.save
       render json: @article
     else
-      render nothing: true, status: :bad_request
+      render json: @article.errors, status: :unprocessable_entity
     end
   end
   
@@ -25,7 +25,7 @@ class Api::V1::ArticlesController < ApplicationController
     if @article.update(article_params)
       render json: @article
     else
-      render nothing: true, status: :bad_request
+      render json: @article.errors, status: :unprocessable_entity
     end
   end
   
@@ -41,6 +41,6 @@ class Api::V1::ArticlesController < ApplicationController
     
     def find_article
      @article = Article.find(params[:id])
-     render nothing: true, status: :not_found unless @article.present?
+     render json: true, status: :not_found unless @article.present?
    end
 end

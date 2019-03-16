@@ -1,19 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+AllFieldsArticle:
   id: 1
-  title: MyString
-  description: MyString
-  author: MyString
-  tags: MyString
-  created_at: 2019-03-15
-  updated_at: 2019-03-15
+  title: Life in Needham
+  description: Describes the life in Needham
+  author: John
+  tags: tag1,tag2
 
-two:
-  id: 1
-  title: MyString
-  description: MyString
-  author: MyString
-  tags: MyString
-  created_at: 2019-03-15
-  updated_at: 2019-03-15
+NoTagsArticle:
+  id: 2
+  title: Life in Newton
+  description: Describes the life in Newton
+  author: Mike
+  tags:
+ 
+NoDescriptionArticle:
+  id: 3
+  title: Life in Burlington
+  description: 
+  author: David
+  tags: tag5
